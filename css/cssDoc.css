@@ -1,0 +1,878 @@
+@font-face {
+    font-family: gloria;
+    src: url("./gloria-hallelujah-v15-latin/gloria-hallelujah-v15-latin-regular.woff") format("woff"),url("./gloria-hallelujah-v15-latin/gloria-hallelujah-v15-latin-regular.woff2") format("woff2");  
+  }
+@font-face {
+    font-family: galBold;
+    font-weight: bold;
+    src: url("./galano/GalanoGrotesque-Bold.eot") format("opentype"), url("./galano/GalanoGrotesque-Bold.woff2") format("woff2"), url("./galano/GalanoGrotesque-Bold.woff") format("woff");
+}
+@font-face {
+    font-family: galLight;
+    font-weight: bold;
+    src: url("./galano/GalanoGrotesque-Light.eot") format("opentype"),url("./galano/GalanoGrotesque-Light.woff2") format("woff2"),url("./galano/GalanoGrotesque-Light.woff") format("woff");
+}
+ 
+
+*{
+    margin: 0%;
+    padding: 0%;
+    border: 0;  
+}
+body{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+.cont{
+    width: 100%;
+    height: 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 9%;
+    margin-top: 3em;
+}
+.header{ 
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw; 
+}
+.banner{
+    width: 100%;
+    height: 100%;
+}
+.nav-bar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    right: 1em;
+}
+.column{
+    margin: 0 0.5em;
+}
+.navCont{
+    font-family: galLight;
+}
+
+.button{
+    background-color: transparent;
+    border: none;
+    font-weight: bolder;
+    cursor: pointer;
+    margin: 0 1em;
+    color: #fff;
+    font-family: galBold;
+}
+.button:focus{
+    border: none;
+    outline: none;
+}
+
+a{
+    color: #fff !important;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:focus, a:focus-visible, a:focus-within, a:hover{
+    border: none;
+    outline: none;
+    text-decoration: none;
+} 
+thead>tr>th{
+    padding: 0  ;
+    font-family: galLight;
+}
+tbody>tr>th{
+    padding: 0;
+    font-family: galBold;
+}
+
+.countTable{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0  ;
+    padding: 0 3em 0 0;
+    width: 50vw !important;
+}
+.Table{
+    text-align: center;
+    width: 50vw !important;
+    font-family: galLight;
+    font-size: 1.2em;
+    font-weight: bold !important;
+}
+.divider{
+    margin: 1em ;
+    width: 100%;
+    height: 4px;
+    display: flex;
+    justify-content: center;
+}
+.span{
+    color: #111;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav{
+      font-size: 20px;
+      display: flex;
+      justify-content: space-evenly;
+    width: 30vw;
+    margin: 0%;
+  }   
+  
+.test{
+    margin: 3em 0 6em 0;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.card{
+    width: 20vw;
+    height: 30vw;
+    margin: 1em;
+    background-color: #fff;
+    display: contents !important;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border:none !important;
+    font-family: galLight;
+
+}
+
+  /* Lazy Load Styles */
+.card-image {
+	display: block;
+	min-height: 12rem; /* layout hack */
+	max-height: 12rem; /* layout hack */
+	max-width: 13rem; /* layout hack */
+	
+    background: #fff center center no-repeat;
+	background-size: cover;
+	filter: blur(3px); /* blur the lowres image */
+}
+
+.card-image > img {
+	display: block;
+	width: 100%;
+	opacity: 0; /* visually hide the img element */
+}
+
+.card-image.is-loaded {
+	filter: none; /* remove the blur on fullres image */
+	transition: filter 1s;
+}
+
+.card {
+	max-width: 20rem;
+	margin: 1rem;
+	font-size: 1rem;
+	text-decoration: none;
+	overflow: hidden; 
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+}
+
+.card:hover {
+	transform: translateY(-0.5rem) scale(1.0125);
+	box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
+}
+
+.card-description { 
+    display: block;
+	padding: 1em 0.5em;
+	color: #515151;
+	text-decoration: none;
+    font-weight: 800;
+}
+.card-description>* {
+    font-size: 1em;
+    text-align: center;
+}
+.card-description>a{
+    text-align: center;
+    border-radius: 10px;
+    padding-top: 10px;
+}
+ 
+.card-description > p {
+	margin: 0;
+}  
+.boton{
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+    text-align:center;
+    text-decoration: none;
+    font-family: gloria;
+    font-size: 1em;
+    display:inline-block;
+    color: #FFF;
+    background: #7F8C8D;
+    padding: 7px 60px;
+    white-space: nowrap;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 100px;
+    margin: 10px 5px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .azul{
+  background: #111111;
+  box-shadow: 0px 5px 0px 0px #111111;
+  }
+  
+  .azul:hover{
+  background: #615959;
+  color: #ffffff;
+  cursor: pointer;
+  }
+  
+  .azul:active{
+  box-shadow: 0px 2px 0px 0px #111111;
+  }
+   
+.columns{
+    overflow-x: hidden !important;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5em;
+    margin-left: 4em;
+    position: absolute;
+    left: -80px; 
+    margin: 0 200px !important;
+    width: 80vw; 
+    margin: 0 160px; 
+}
+.sect{ 
+    margin-left: 10%;
+    margin:35% 0 10% 10%;
+    width:80vw ;
+    font-family: galLight;
+}
+.sect>p>a>b{
+    font-family: galBold;
+}
+.contM{
+    width: 40vw;
+    height: 50%;
+    }
+section p {
+    overflow: hidden;
+    max-height: 0;
+    text-align: justify;
+    font-family: "Courier New", Courier, monospace;
+    background: #e4e4e4;
+    transition: all 0.2s ease-in;
+  }
+  
+  section a {
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    padding: 10px;
+    font-family: "Courier New", Courier, monospace;
+    background-color: #212121;
+    border-bottom: 2px solid gray;
+    color: white;
+  }
+  
+  section:target p {
+    max-height: 120px;
+    padding: 10px;
+  }
+  .containerM{
+      padding: 0 20%;
+  }
+
+  
+  .slides {
+    width: 100%; /* card * 4 + margin * 4 */
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    transition: all .5s ease;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  .slides .slide {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  
+    margin-right: 15px;
+    margin-left: 15px;
+    border-radius: 10px;
+    background: #eee;
+    transition: transform 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transform: translateX(0px);
+  }
+  p>a{
+       color: rgb(51, 2, 107) !important;
+  }
+    
+  .imgClaim>img{
+      width: 40vw;
+  }  
+
+  .imgClaim{
+      display: -webkit-inline-box;
+  }
+  .colla{
+      margin: 2em 0 0 2em;
+      width: 36vw;
+  }
+  
+
+ 
+  /* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 25%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .collapsible:hover {
+    background-color: #ccc;
+  }
+  
+  /* Style the collapsible content. Note: hidden by default */
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    font-weight: lighter;
+  }
+  .collapseButt{ 
+    width: 100%;
+    background-color: transparent;
+    padding: 8px;
+    margin-top: 0;  
+    font-family:  galBold !important;
+  } 
+  thead{
+    font-family: galLight;
+  }
+  tbody{
+    font-family:  galBold !important;
+    font-size: 1.5em;
+  }
+
+  
+
+ .is-active{
+     font-family: galBold;  
+
+ } 
+ .all{
+     font-size: 17px;
+ }
+ table, th, td {
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+  }
+    th, td {
+        width: 30px;
+    }
+  .countTable{
+    width: 80vw !important;
+    margin: 0 0 0 1em;
+  }
+  .footer{
+      height: 4vw;
+      background-color: #212121;
+      width: 99vw;
+      text-align: center;
+      padding: 15px;
+  } 
+  .tabla{
+    margin-top: 2em;
+    width: 100%;
+  }
+  th{
+      width: 20%;
+  } 
+  body { 
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+  }
+  .tri{
+    background-color: transparent; 
+    position: relative;
+    top: 2em;
+    z-index: 999;
+    cursor: pointer;
+  }
+  .tri:focus{
+    outline: none;
+  }
+
+  .tri:hover{
+    outline: none;
+
+  }
+  .arrow-right { 
+    float: right;
+    margin-right: 3em;
+    width: 0; 
+    height: 0; 
+    border-top: 2em solid transparent;
+    border-bottom: 2em solid transparent;
+    border-left: 2em solid #444;
+  }
+
+.arrow-left {
+
+    margin-left: 3em;  
+    width: 0; 
+    height: 0; 
+    border-top: 2em solid transparent;
+    border-bottom: 2em solid transparent; 
+    border-right:2em solid #444; 
+  }
+  .separator{
+    width: 99vw;
+    height: 4em;
+    background-color: white;
+    margin:0;
+    padding: 0 10vw; 
+}
+.preImgClaim{
+
+    padding: 3em 0 0 10vw;
+}
+  .contClaim{
+      margin-top: 12em !important; 
+      width: 99vw;
+      background-color:#0a4452;
+      height: 40%;
+      
+      padding: 0 0 3em 0;
+      color: #7F8C8D;
+  }
+  .colla>button{
+      color: #fff;
+  }
+  .content>p{
+    color: #fff;
+  }
+  .footer>img{    
+    float: right;
+    margin-right: 4em;
+    height: auto;
+    width: 30%;
+  }
+  .iconC{
+      width: 35px;  
+      height: auto;
+  }
+  #aprobar{
+      float: right;
+  }  
+ 
+/*max 450*/
+  @media screen and (max-width:450px) {
+      .cDesktop{
+            display: none;
+      }
+      .banner{
+            width: 100%;
+            height: auto;
+      }
+      .cont{
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+      #aprobar{
+        width: 80vw;
+        float: none !important;
+        margin: 2em 0;
+        }
+      .Table{
+          font-size: small;
+          width: 90vw !important;
+          margin: 0 0 2em 1em !important;
+      } 
+      .linea{
+            width: 80vw;
+            margin:  0 1.5em ;
+            height: 2px;
+            border: solid 1px #ccc;
+      }
+      table, th, td {
+        border:none;
+        margin-bottom: 2em !important;
+    }
+    .navCont{
+        width: 80vw;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        font-size: smaller;
+    } 
+    .nav{
+        width: 80vw !important;
+        margin: 2em;
+        padding: 0;
+        font-size: small;
+    }
+    .test{
+        margin: 2em 0;
+    }
+    .columnsM{
+        overflow-x: scroll !important;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 ;
+        margin: 0 !important;
+        width: 80vw; 
+    }
+    .card-description{
+        margin: 1em 0%;
+        padding: 0;
+    }
+    .card-description>p{
+        font-size: small;
+    }
+    .columnM{
+        margin: 0;
+    }
+    .column{
+        margin: 0 1em;
+    }
+    .card-image{
+        max-width: 40vw;
+    }
+    .card-description>a{
+        margin: 0 10px;
+    }
+    .boton{
+        padding: 0 1.5em;
+        border-radius: 0 !important;
+    }
+    .azul{
+        padding-bottom: 5px;
+    }
+    .stakeAll{
+        background-color: #381f49;
+        color: #eee;
+        font-family: gloria;
+        font-size: 1em;
+        margin: 1em;
+        padding: 0.5em;
+    }
+    .spa{
+        margin: 1.5em  !important;
+    }
+    .claimM{
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+
+    .faqM{
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        height: 30%;
+        background-color: #111;
+        color: #e4e4e4;
+    }
+    .collaM{
+        width: 90vw;
+        margin: 0 1em ;
+        padding: 0;
+        height: 30%;
+        background-color: #111;
+        color: #e4e4e4;
+    }
+    .collaM>button{
+        color: #fff;
+    }
+    .collaM>button:active{
+        background-color:#111 ;
+    }
+    .collaM>button:focus{
+        outline: none;
+    }
+    .collaM>button:hover{
+        outline: none;
+         background-color:#111 ;
+    } 
+    .collaM>.collapseButt:active{
+        background-color:#111 ;
+    }
+    .collaM>.collapseButt:focus{
+        outline: none;
+    }
+    .collaM>.collapseButt:hover{
+        outline: none;
+         background-color:#111 ;
+    } 
+    
+    .collaM>.collapsible:hover{
+        outline: none;
+         background-color:#111 ;
+    } 
+    .collaM>.collapsible:active{
+        background-color:#111 ;
+    }
+    .collaM>.collapsible:focus{
+        outline: none;
+    }
+    .collaM>.collapsible:hover{
+        outline: none;
+         background-color:#111 ;
+    } 
+    .active{
+        background-color:#111 !important ;
+    }
+
+}
+/*max 450*/
+/*min 451*/
+    @media screen and (min-width:451px) {
+        .cMobile{
+                display:none;
+        } 
+    }
+/*min 451*/
+
+/*min 1200*/
+@media (min-width:1200px) {
+    .nav-bar{
+        top: 2em;
+    }
+  .countTable { 
+      width: 60vw !important;
+  }
+  .card {
+      height: 23vw !important;
+  }
+  .sect {
+      margin: 20% 0 10% 10% !important;
+  }
+}
+/*min 1200*/
+/* max 1200 */
+@media (max-width: 1200px) {
+  .columns{
+      margin: 0 180px !important;
+  }
+  .countTable{
+      margin: 0;
+      width: 70vw;
+  }
+  .navCont{
+      margin: 0;
+  }
+  .nav{
+      width: 45vw;
+  }
+  .card{
+      max-width: 12rem;
+      height: 30vw;
+  }
+  .sect{
+    margin: 31% 0 10% 10%;
+  }
+  .divider{
+    margin-left: 0%;
+    width: 100%;
+}
+.buttons{
+    margin-top: 1em !important;
+}
+}
+/*max 1200 */
+/*max 1400*/
+@media (max-width: 1400px) {
+  .columns{
+      margin: 0 200px;
+  }
+  .countTable{
+      margin: 0;
+      width: 40vw;
+  }
+  .navCont{
+      margin: 0;
+  }
+  .nav{
+      width: 40vw;
+  }
+  .card{
+      max-width: 12rem;
+      height: 17vw;
+  }
+  .sect{
+    margin: 22% 0 10% 10%;
+  }
+  .divider{
+    margin-left: 0%;
+    width: 100%;
+} 
+.buttons{
+    margin-top: 0em;
+
+}
+}
+/* max 1400 */
+
+/*min 1401*/
+@media (min-width:1401px) {
+  .card {
+      max-width: 14rem !important;
+      height: 22vw !important;
+  }
+}
+/*min 1401*/  
+/*min 1600*/
+@media (min-width:1600px) {
+  .buttons{
+      margin-top: 1em;
+  }
+  .columns{
+      margin: 0 300px !important;
+  }
+  .countTable { 
+      width: 60vw !important;
+  }
+  .card {
+      
+  height: 18vw !important;
+  width: 11vw !important;
+  }
+  .sect {
+      margin: 21% 0 10% 10% !important;
+  }
+  .imgClaim>img {
+      width: 35vw;
+  }
+  .sect {
+      margin: 19% 0 10% 10% !important;
+  }
+  .columns {
+  margin: 0 260px !important;
+}
+
+}
+  /*min 1600*/
+
+
+  /*burguir*/
+  #menu {
+    font-family: galBold;
+    z-index: 2;
+  }
+  
+  #menu-bar {
+    width: 45px;
+    height: 40px;
+    margin: 30px 0px 20px 75px;
+    cursor: pointer;
+  }
+  
+  .bar {
+    height: 5px;
+    width: 100%;
+    background-color: #e0ade5;
+    display: block;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  
+  #bar1 {
+    transform: translateY(-4px);
+  }
+  
+  #bar3 {
+    transform: translateY(4px);
+  }
+  
+  .navBur {
+    transition: 0.3s ease;
+    display: none;
+  }
+  
+  .navBur ul {
+    padding: 0 22px;
+  }
+  
+  .navBur li {
+    list-style: none;
+    padding: 12px 0;
+  }
+  
+  .navBur li a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  .nav li a:hover {
+    font-weight: bold;
+  }
+  
+  .menu-bg, #menu {
+    top: 0;
+    right: 1em;
+    position: absolute;
+  }
+  
+  .menu-bg { 
+    z-index: 1;
+    width: 0;
+    height: 0;
+    margin: 30px 0 20px 20px;
+    background: radial-gradient(circle, #e0ade5, #e0ade5);
+    border-radius: 50%;
+    transition: 0.3s ease; ;
+  }
+  
+  .change {
+    display: block;
+  }
+  
+  .change .bar {
+    background-color: white;
+  }
+  
+  .change #bar1 {
+    transform: translateY(4px) rotateZ(-45deg);
+  }
+  
+  .change #bar2 {
+    opacity: 0;
+  }
+  
+  .change #bar3 {
+    transform: translateY(-6px) rotateZ(45deg);
+  }
+  
+  .change-bg {
+    width: 520px;
+    height: 666px;
+    transform: translate(50%,-30%);
+  } 
+  /*burguir*/
